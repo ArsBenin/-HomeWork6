@@ -4,9 +4,9 @@
 b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; 5,5)
 */
 
-int GetNumber(string message)
+double GetNumber(string message)
 {
-    int result = 0;
+    double result = 0;
     string errorMessage = "Вы ввели не корректое число. Введите натуральное число";
 
     while(true)
@@ -14,7 +14,7 @@ int GetNumber(string message)
         
         Console.WriteLine(message);
 
-        if(int.TryParse(Console.ReadLine(), out result))
+        if(double.TryParse(Console.ReadLine(), out result))
             break;
         else
         {
@@ -25,7 +25,7 @@ int GetNumber(string message)
     return result;
 }
 
-void Intersection (int b1, int k1, int b2, int k2)
+void Intersection (double b1, double k1, double b2, double k2)
 
 {  
     if(k1==k2 && b1==b2)
@@ -38,15 +38,15 @@ void Intersection (int b1, int k1, int b2, int k2)
     }
     else
     {
-    double x = (b1-b2)/(k2-k1);
-    double y = k1 * x + b1;
+    double x = (b2-b2)/(k2-k1);
+    double y = k1*x + b1;
     Console.WriteLine ($"точка пересечения 2х указанных прямых ({x},{y})");
     }
 }
 
-int b1 = GetNumber("Введите значение b1");
-int k1 = GetNumber("Введите значение k1");
-int b2 = GetNumber("Введите значение b2");
-int k2 = GetNumber("Введите значение k2");
+double b1 = GetNumber("Введите значение b1");
+double k1 = GetNumber("Введите значение k1");
+double b2 = GetNumber("Введите значение b2");
+double k2 = GetNumber("Введите значение k2");
 
 Intersection(b1,k1,b2,k2);
