@@ -38,7 +38,7 @@ void Intersection (double b1, double k1, double b2, double k2)
     }
     else
     {
-    double x = (b2-b2)/(k2-k1);
+    double x = (b1-b2)/(k2-k1);
     double y = k1*x + b1;
     Console.WriteLine ($"точка пересечения 2х указанных прямых ({x},{y})");
     }
